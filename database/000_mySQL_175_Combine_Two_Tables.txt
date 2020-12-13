@@ -1,0 +1,27 @@
+
+https://www.youtube.com/watch?v=ADavjARETUQ
+LeetCode in MySQL 175 Combine Two Tables - Michelle小梦想家 (English Version)
+
+
+
+SELECT tb1.FirstName as FirstName, tb1.LastName as LastName, tb2.City as City, tb2.State as State
+FROM Person as tb1
+LEFT JOIN Address as tb2
+ON tb1.PersonId = tb2.PersonId;
+
+
+
+/comment/
+SELECT the final table variables format from table1 (FirstName,LastName) then table2 (City,State)
+(FirstName,LastName,City,State)
+declare Person as tb1, Address as tb2 (where Person and Address is given table)
+choose the variable to join together (ON)
+/comment/
+
+
+-why left join but not right join or other join?
+https://stackoverflow.com/questions/5706437/whats-the-difference-between-inner-join-left-join-right-join-and-full-join
+
+
+LEFT JOIN: returns all rows from the left table, even if there are no matches in the right table.
+RIGHT JOIN: returns all rows from the right table, even if there are no matches in the left table.
