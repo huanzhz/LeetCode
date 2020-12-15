@@ -1,0 +1,25 @@
+
+https://www.youtube.com/watch?v=CcqyGncGVXw
+LeetCode in MySQL 176 Second Highest Salary - Michelle小梦想家 (English Version)
+
+# A part - find the highest salary
+# 1. aggregation max(Salary)
+# 2. Order by
+
+# B part - find the list which the salary is below the highest salary
+
+# C part - order the rest of the table and find the highest salary within the rest of the table
+
+SELECT max(Salary) as SecondHIghestSalary
+FROM Employee
+WHERE Salary < (SELECT max(Salary)
+				FROM Employee);
+
+
+# second method to get the highest salary
+SELECT max(Salary) as SecondHIghestSalary
+FROM Employee
+WHERE Salary < (SELECT Salary
+				FROM Employee
+				ORDER BY Salary DESC
+				LIMIT 1);

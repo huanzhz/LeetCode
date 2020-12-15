@@ -1,0 +1,59 @@
+
+
+https://www.youtube.com/watch?v=D3VytGk94_A
+LeetCode in MySQL 178. Rank Scores - Michelle小梦想家 (English Version)
+
+
+SELECT tb1.Score AS Score, (SELECT count(distinct tb2.Score)
+							FROM Scores AS tb2
+							WHERE tb2.Score > tb1.Score)+1 AS Rank
+FROM Scores AS tb1
+ORDER BY tb1.Score DESC
+
+# +1 because rank start with 0 
+
+
+# Window Function cannot be used within mySQL
+# FUNCTION() OVER(PARTITION BY x ORDER BY y ASC/DESC)
+# Frequently used functions:
+# RANK(), ROW_NUMBER() and DENSE_RANK()
+
+
+
+https://www.youtube.com/watch?v=H6OTMoXjNiM
+SQL Tutorial - Window Functions
+
+/* window functions */
+SELECT
+	Sales_Id
+	,Item
+	,Price
+	,Quantity
+	,Line_Total
+	,COUNT(Line_Total) OVER(PARTITION BY Sales_Id) AS Line_Count
+	,SUM(Line_Total) OVER(PARTITION BY Sales_Id) AS Sale_Total
+	,SUM(Line_Total) OVER(PARTITION BY Sales_Date) AS Daily_Total
+	,SUM(Line_Total) OVER() AS Total
+FROM Sales_Details
+/* window functions */
+
+
+
+/* original query */
+SELECT * FROM Sales_Details
+WITH CTE
+AS
+(
+SELECT
+	Sales_Id
+	,SUM(Line_Total) AS Total
+FROM Sales_Details
+GROUP BY Sales_Id
+)
+
+SELECT * FROM CTE AS A
+INNER JOIN Sales_Details AS S
+	ON A.Sales_Id - B.Sales_Id
+/* original query */
+
+

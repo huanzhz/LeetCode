@@ -1,0 +1,31 @@
+
+
+https://www.youtube.com/watch?v=phPVIEQHgps
+LeetCode in MySQL 177 Nth Highest Salary - Michelle小梦想家 (English Version)
+
+
+CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT
+BEGIN
+DECLARE m INT:
+SET m = n - 1;
+	RETURN (
+		SELECT Salary
+		FROM Employee
+		GROUP BY Salary
+		ORDER BY Salary DESC
+		LIMIT m, 1
+	);
+END
+
+# initial row is 0 hence we need (n-1)
+
+# LIMIT 1
+# LIMIT OFFSET, COUNT		
+# OFFSET: specifies the offset of the first row to return
+# COUNT: specifies the maximum number of row to return
+
+# situation
+# Salary : 100, 200, 200, 300, 300, 400
+# ORDER BY DESCN Salary: 400, 300, 300, 200, 200, 100
+
+
