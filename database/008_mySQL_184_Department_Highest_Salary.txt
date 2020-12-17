@@ -1,0 +1,16 @@
+
+https://www.youtube.com/watch?v=f9fQbJE-aHI
+LeetCode in MySQL 184. Department Highest Salary - Michelle小梦想家 (English Version)
+
+
+SELECT tb2.Name AS Department, tb1.Name AS Employee, tb1.Salary AS Salary
+FROM Employee as tb1
+LEFT JOIN Department as tb2
+ON tb1.DepartmentId = tb2.Id
+WHERE (tb2.Id, tb1.Salary) in (SELECT DepartmentId, max(Salary)
+								FROM Employee
+								GROUP BY DepartmentId);
+
+
+
+

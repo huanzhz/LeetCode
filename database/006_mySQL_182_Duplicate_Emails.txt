@@ -1,0 +1,13 @@
+
+https://www.youtube.com/watch?v=1ilwK_m1uuU
+LeetCode in MySQL 182. Duplicate Emails - Michelle小梦想家 (English Version)
+
+
+SELECT DISTINCT tb1.Email
+FROM Person as tb1
+INNER JOIN Person as tb2
+ON tb1.Email = tb2.Email AND tb1.Id != tb2.Id;
+
+
+
+INNER JOIN: returns rows when there is a match in both tables.

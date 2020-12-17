@@ -8,7 +8,7 @@ SELECT tb1.Score AS Score, (SELECT count(distinct tb2.Score)
 							FROM Scores AS tb2
 							WHERE tb2.Score > tb1.Score)+1 AS Rank
 FROM Scores AS tb1
-ORDER BY tb1.Score DESC
+ORDER BY tb1.Score DESC;
 
 # +1 because rank start with 0 
 

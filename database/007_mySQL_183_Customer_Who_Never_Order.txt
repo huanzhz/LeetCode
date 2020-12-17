@@ -1,0 +1,17 @@
+
+https://www.youtube.com/watch?v=XLB-OLGUUwA
+LeetCode in MySQL 183. Customers Who Never Order - Michelle小梦想家 (English Version)
+
+
+SELECT tb1.Name as Customers
+FROM Customers as tb1
+LEFT JOIN Orders as tb2
+ON tb1.Id = tb2.CustomerId
+WHERE tb2.Id is NULL;
+
+
+NULL is zero or empty
+
+
+
+
