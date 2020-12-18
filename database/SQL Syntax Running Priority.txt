@@ -1,0 +1,4 @@
+
+# SQL Syntax Running Priority
+FROM -> ON -> JOIN -> WHERE -> GROUP BY -> WITH -> HAVING -> SELECT -> DISTINCT -> ORDER BY
+

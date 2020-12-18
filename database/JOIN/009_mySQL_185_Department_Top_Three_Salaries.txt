@@ -1,0 +1,21 @@
+
+https://www.youtube.com/watch?v=AqZ7taqXZvU
+LeetCode in MySQL 185. Department Top Three Salaries - Michelle小梦想家 (English Version)
+
+
+SELECT tb2.Name AS Department, tb1.Name AS Employee, tb1.Salary AS Salary
+FROM Employee AS tb1
+INNER JOIN Department AS tb2
+ON tb1.DepartmentId = tb2.Id
+WHERE (SELECT count(DISTINCT Salary)
+		FROM Employee as tb3
+		WHERE tb3.DepartmentId = tb1.DepartmentId AND tb3.Salary > tb1.Salary) < 3;
+
+
+
+
+INNER JOIN: returns rows when there is a match in both tables.
+
+
+
+

@@ -1,0 +1,12 @@
+
+https://www.youtube.com/watch?v=7IPGPcXBp0A
+LeetCode in MySQL 196. Delete Duplicate Emails - Michelle小梦想家 (English Version)
+
+
+DELETE p1
+FROM Person as p1, Person as P2
+WHERE p1.Email = p2.Email AND p1.Id > p2.Id;
+
+
+
+

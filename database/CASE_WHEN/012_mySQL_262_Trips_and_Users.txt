@@ -1,0 +1,37 @@
+
+
+https://www.youtube.com/watch?v=kpjz21BkZIw
+LeetCode in MySQL 262. Trips and Users - Michelle小梦想家 (English Version)
+
+
+SELECT tb1.Request_at AS Day, ROUND(SUM(CASE WHEN tb1.Status = 'completed' THEN 0
+									ELSE 1
+									END) / count(*),2) AS 'Cancellation Rate'
+FROM Trips as tb1
+INNER JOIN Users as tb2
+ON tb1.Client_Id = tb2.Users_Id AND tb2.Banned = 'NO'
+INNER JOIN Users as tb3
+ON tb1.Driver_Id = tb3.Users_Id AND tb3.Banned = 'NO'
+WHERE tb1.Request_at BETWEEN '2013-10-01' AND '2013-10-03'
+GROUP BY tb1.Request_at
+ORDER BY Day;
+
+
+	
+-Definition
+CASE WHEN
+The CASE statement goes through conditions and return a value when the first condition is met
+( like an IF-THEN-ELSE statement). So, once a condition is true, it will stop reading and return the result.
+
+If no conditions are true, it will return the value in the ELSE clause
+
+If there is no ELSE part and no conditions are true, it return NULL.
+
+-Syntax
+CASE
+	WHEN condition1 Then result1
+	WHEN condition2 Then result2
+	WHEN conditionN Then resultN
+	ELSE result
+END;
+

@@ -1,0 +1,29 @@
+
+https://www.youtube.com/watch?v=5CEUNZ3m6uM
+LeetCode in MySQL 596. Classes More Than 5 Students - Michelle小梦想家 (English Version)
+
+
+SELECT class
+FROM courses
+GROUP BY class 
+HAVING count(DISTINCT(student)) >= 5;
+
+
+
+https://www.youtube.com/watch?v=cW2MLIZ5CaU
+Learning MySQL - GROUP BY
+
+SELECT COUNT(m.movie_id) AS total, g.genre_title, m.director
+FROM movie AS m INNER JOIN genres AS genre_title
+ON m.genre_id = g.genre_id
+WHERE m.year < 2000
+GROUP BY g.genre_title, m.director
+ORDER BY total DESC
+
+
+WHERE
+HAVING
+
+# SQL Syntax Running Priority
+FROM -> ON -> JOIN -> WHERE -> GROUP BY -> WITH -> HAVING -> SELECT -> DISTINCT -> ORDER BY
+
