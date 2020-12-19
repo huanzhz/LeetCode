@@ -1,0 +1,7 @@
+
+https://www.youtube.com/watch?v=fytXyuMF2RY
+LeetCode in MySQL 627. Swap Salary - Michelle小梦想家 (English Version)
+
+UPDATE salary
+SET sex=(IF(sex ='f','m','f'));
+

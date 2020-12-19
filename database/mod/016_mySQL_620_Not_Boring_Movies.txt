@@ -1,0 +1,12 @@
+
+https://www.youtube.com/watch?v=X3Kh-LUo5zM
+LeetCode in MySQL 620. Not Boring Movies - Michelle小梦想家 (English Version)
+
+SELECT *
+FROM cinema
+WHERE mod(id, 2) = 1 AND description != 'boring'
+ORDER BY rating DESC;
+
+
+module function
+

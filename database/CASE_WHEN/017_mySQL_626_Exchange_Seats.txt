@@ -1,0 +1,21 @@
+
+https://www.youtube.com/watch?v=q4_ZUN-jWec
+LeetCode in MySQL 626. Exchange Seats - Michelle小梦想家 (English Version)
+
+
+SELECT (CASE WHEN mod(id, 2) = 1 AND id = counts THEN id
+			 WHEN mod(id, 2) = 1 AND id != counts THEN id + 1
+			 ELSE id - 1
+		END) AS id, student
+FROM seat, (SELECT count(*) AS counts FROM seat) AS counts
+ORDER BY id;
+
+
+# declare counts
+# (SELECT count(*) AS counts FROM seat) AS counts
+
+# Rule
+# 1. ID is odd number & id is equal to the count of # students, then id = id
+# 2. ID is odd number & id is not equal to the count of # students, then id = id + 1
+# 3. ID is even number, then id = id - 1
+
