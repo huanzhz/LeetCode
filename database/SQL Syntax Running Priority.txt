@@ -2,3 +2,18 @@
 # SQL Syntax Running Priority
 FROM -> ON -> JOIN -> WHERE -> GROUP BY -> WITH -> HAVING -> SELECT -> DISTINCT -> ORDER BY
 
+#https://www.youtube.com/watch?v=pCdxZtD9mR4
+#SQL知识点讲解 - MySQL基础 II (Database & Table) - Michelle小梦想家
+
+#Tables contains Primary Key and Foreign Key
+#Primary key is unique identifier for each record.
+#Primary key cannot contains duplicates or be Null.
+#Foreign keys may be reference primary keys from other tables.
+#Foreign keys can be duplicates or Null.
+
+SELECT columnName
+FROM tableName
+WHERE logicalCondition
+GROUP BY columnName
+HAVING logicalCondition
+ORDER BY columnName

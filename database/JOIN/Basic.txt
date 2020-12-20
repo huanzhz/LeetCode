@@ -1,0 +1,39 @@
+
+
+#https://www.youtube.com/watch?v=YBwZ3kbRSJM
+#SQL知识点讲解 - MySQL基础 VII (INNER JOIN) - Michelle小梦想家
+
+#https://www.youtube.com/watch?v=RnK592EOx70
+#SQL知识点讲解 - MySQL基础 VIII (LEFT JOIN) - Michelle小梦想家
+#LEFT JOIN has <na> for value that does not matched while INNER JOIN exlcude them.
+
+
+INNER JOIN
+	Returns records that exist in BOTH tables, and excludes unmatched records
+	FROM Left_Table_Name
+		INNER JOIN Right_Table_Name
+
+LEFT JOIN
+	Returns ALL records from LEFT table, and any matching records from the RIGHT table
+	FROM Left_Table_Name
+		LEFT JOIN Right_Table_Name
+		
+RIGHT JOIN
+	Returns ALL records from RIGHT table, and any matching records from the LEFT table
+	FROM Left_Table_Name
+		RIGHT JOIN Right_Table_Name
+		
+OUTER JOIN
+	Returns records that exist in BOTH tables, and including unmatched records
+	FROM Left_Table_Name
+		OUTER JOIN Right_Table_Name
+
+UNION
+	Returns all data from one table, with all data from another table appended to the end
+	SELECT ... FROM First_Table_Name
+		UNION
+	SELECT ... FROM Second_Table_Name
+	
+(need same size and column)
+#https://www.youtube.com/watch?v=JyGB8jLdZGg
+#SQL知识点讲解 - MySQL基础 X (UNION) - Michelle小梦想家
