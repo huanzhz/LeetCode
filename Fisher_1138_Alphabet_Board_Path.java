@@ -67,6 +67,9 @@ class Solution{
 	
 	// initialise the hashmap
 	private Map<Character, int[]> initMap(){
+		// hashmap , key->value or dictionary
+		//How HashMap works in Java? With Animation!! whats new in java8 tutorial
+		//https://www.youtube.com/watch?v=c3RVW3KGIIE
 		Map<Character, int[]> map = new HashMap();
 		int row;
 		int col;
