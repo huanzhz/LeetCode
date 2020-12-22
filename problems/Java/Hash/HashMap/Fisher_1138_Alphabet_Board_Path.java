@@ -90,7 +90,12 @@ class Solution{
 	}
 }
 
-
+/*
+Input: target = "leet"
+Output: "DDR!UURRR!!DDD!"
+Input: target = "code"
+Output: "RR!DDRR!UUL!R!"
+*/
 
 
 

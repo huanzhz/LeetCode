@@ -43,3 +43,15 @@ class Solution {
 // 1,2,3,4 mySet.add()
 // 3,1,4,2
 // use for each loop to loop through
+
+
+/*
+Input: word1 = "abc", word2 = "bca"
+Output: true
+Input: word1 = "a", word2 = "aa"
+Output: false
+Input: word1 = "cabbba", word2 = "abbccc"
+Output: true
+Input: word1 = "cabbba", word2 = "aabbss"
+Output: false
+*/
