@@ -1,6 +1,8 @@
 
 //https://www.youtube.com/watch?v=TXd5lfP3Gac
 //LeetCode 118: Pascal's Triangle - Interview Prep Ep 34
+//https://www.youtube.com/watch?v=iVhmR1bzKoo
+//LeetCode 119: Pascal's Triangle II - Interview Prep Ep 28
 //https://leetcode.com/problems/pascals-triangle-ii/
 
 // 1 1 1 

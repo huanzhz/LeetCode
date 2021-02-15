@@ -1,6 +1,8 @@
 
 //https://www.youtube.com/watch?v=Q0WKzdpR74o
 //LeetCode 954. Array of Doubled Pairs - Interview Prep Ep 77
+//https://www.youtube.com/watch?v=y55NlhoOWe4
+//LeetCode 954: Array of Doubled Pairs - Interview Prep Ep 27
 //https://leetcode.com/problems/array-of-doubled-pairs/
 
 class Solution {
