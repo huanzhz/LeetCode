@@ -5,8 +5,7 @@
 
 class Solution {
     public String defangIPaddr(String address) {
-        char[] t = 
-        for(int i=0)
+        return address.replaceAll("\\.", "\\[\\.\\]");
         
     }
 }
